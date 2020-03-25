@@ -1,0 +1,81 @@
+create database car;
+set names gbk;
+use car;
+-- 创建用户表
+create table user(
+	id int NOT NULL auto_increment primary key,
+	user varchar(20) NOT NULL unique,
+	pwd  varchar(20) NOT NULL
+);
+insert into user(user,pwd) values('liukang','123456');
+insert into user(user,pwd) values('lk', 'lk123456');
+insert into user(user,pwd) values('carManger', '123456');
+-- 创建表
+create table factory(
+id int auto_increment primary key,
+name varchar(255)
+);
+
+insert into factory(name) values('请选择厂家'); 
+insert into factory(name) values('上海大众'); 
+insert into factory(name) values('华晨宝马');
+insert into factory(name) values('东风日产');
+insert into factory(name) values('林肯');
+insert into factory(name) values('北京现代');
+insert into factory(name) values('广州本田');
+insert into factory(name) values('福特');
+insert into factory(name) values('中国一汽');
+
+
+create table brand(
+id int not null auto_increment primary key,
+name varchar(255),
+fname varchar(255),
+color varchar(255),
+price int not null,
+sum int not null,
+sell int not null,
+last int not null
+);
+
+
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('甲壳虫','上海大众','白色',20,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('奥迪A6','上海大众','金色',20,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('宝马X3','华晨宝马','白色',35,50,10,40);
+
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('宝马X4','华晨宝马','金色',35,50,20,30);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('贵士','东风日产','金色',20,50,15,35);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('林肯MKC','林肯','白色',36,50,10,40);
+
+
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('途胜','北京现代','白色',36,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('圣达菲','北京现代','白色',36,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('雅绅特','北京现代','白色',36,50,10,40);
+
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('雅阁','广州本田','白色',36,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('思迪','广州本田','白色',36,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('奥德赛','广州本田','白色',36,50,10,40);
+
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('马自达','福特','白色',36,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('沃尔沃','福特','白色',36,50,10,40);
+
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('红旗','中国一汽','白色',36,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('夏利','中国一汽','白色',36,50,10,40);
+insert into brand(name,fname,color,price,sum,sell,last) 
+	values('奔腾','中国一汽','白色',36,50,10,40);
